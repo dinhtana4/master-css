@@ -1,0 +1,28 @@
+mixin tourItem(imageUrl, price, title, review, reviewCounts, durations)
+    .tour
+        .tour-top
+            img.tour-image(src= imageUrl, alt='')
+            span.tour-price(href='#') From $#{price} 
+        .tour-body
+            .tour-content
+                h3.tour-title= title
+                .tour-rating
+                    .tour-review
+                        img(src='./images/star.png', alt='')
+                        .tour-review-count #{review} (#{reviewCounts} reviews)
+                    .tour-duration Duration: #{durations} hours
+            div
+                a.tour-button(href='#') Tours Price $60
+
+mixin popularItem(imageUrl, time, title, review) 
+    .popular-item 
+        .popular-image 
+            img.popular-img(src= imageUrl)
+            .popular-overlap
+            span.popular-label Must See
+        .popular-content 
+            span.popular-time= time
+            h3.popular-titl= title
+            .popular-ratting 
+                img(src='./images/star.png' alt='star')
+                span.popular-review #{review} (12 reviews)
