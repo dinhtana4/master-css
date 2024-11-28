@@ -10,21 +10,79 @@ html(lang="en")
         link(rel='preconnect', href='https://fonts.googleapis.com')
         link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
         link(href='https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap' rel='stylesheet')
         link.css(rel='stylesheet', href='./styles/app.css')
     body
-        section.top-tours 
-            .container 
-                h2.heading Top Bangkok Tour
-                .tour-list
-                    +tourItem('./images/img1.png', 40, 'Thailands Ayutthaya Temples Cruise from Bangkok', 4.8, 20, 5)
-                    +tourItem('https://plus.unsplash.com/premium_photo-1688072514847-73bacc343aab?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 60, 'FLoating Markets Day Trip from gkok', 4.5, 16, 9)
-                    +tourItem('https://images.unsplash.com/photo-1571572123621-6cc30fa617cd?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 50, 'Bangkok Dinner Cruise on the Chao Phraya River', 4.6, 24, 3)
-        section.popular-things
-            .container 
-                h2.heading Popular things to do in Bangkok
-                .popular-list
-                    +popularItem('https://images.unsplash.com/photo-1732383055768-ac257dbfc8be?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D', 'Sep 28 10:00 AM - 1:00 PM', 'The Grand Palace', 4.8)
-                    +popularItem('https://plus.unsplash.com/premium_photo-1688072514847-73bacc343aab?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'July 15 10:00 AM - 1:00 PM', 'Chatuchak Weekend', 3.9)
-                    +popularItem('https://plus.unsplash.com/premium_photo-1675715923941-0344aa115492?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'December 10 10:00 AM - 1:00 PM', 'Wat Pho', 5.0)
-                    +popularItem('https://images.unsplash.com/photo-1544715299-be6aa4573478?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'March 25 10:00 AM - 1:00 PM', 'Temple Of Dawn', 4.5)
-                    +popularItem('https://images.unsplash.com/photo-1732103377360-be02613c9df0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'February 25 10:00 AM - 1:00 PM', 'Temple Of Dawn', 4.0)
+        header 
+        main 
+            section.section 
+                .container 
+                    h2.heading Top Bangkok Tour
+                    .tour-list
+                        +tourItem('./images/img1.png', 40, 'Thailands Ayutthaya Temples Cruise from Bangkok', 4.8, 20, 5)
+                        +tourItem('https://plus.unsplash.com/premium_photo-1688072514847-73bacc343aab?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 60, 'FLoating Markets Day Trip from gkok', 4.5, 16, 9)
+                        +tourItem('https://images.unsplash.com/photo-1571572123621-6cc30fa617cd?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 50, 'Bangkok Dinner Cruise on the Chao Phraya River', 4.6, 24, 3)
+            section.section
+                .container 
+                    h2.heading Popular things to do in Bangkok
+                    .popular-list
+                        +popularItem('https://images.unsplash.com/photo-1732383055768-ac257dbfc8be?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D', 'Sep 28 10:00 AM - 1:00 PM', 'The Grand Palace', 4.8)
+                        +popularItem('https://plus.unsplash.com/premium_photo-1688072514847-73bacc343aab?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'July 15 10:00 AM - 1:00 PM', 'Chatuchak Weekend', 3.9)
+                        +popularItem('https://plus.unsplash.com/premium_photo-1675715923941-0344aa115492?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'December 10 10:00 AM - 1:00 PM', 'Wat Pho', 5.0)
+                        +popularItem('https://images.unsplash.com/photo-1544715299-be6aa4573478?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'March 25 10:00 AM - 1:00 PM', 'Temple Of Dawn', 4.5)
+                        +popularItem('https://images.unsplash.com/photo-1732103377360-be02613c9df0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'February 25 10:00 AM - 1:00 PM', 'Temple Of Dawn', 4.0)
+            section.section 
+                .container 
+                    h2.heading Hidden gems in Bangkok
+                    .gem-list
+                        each val in ['https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHJhdmVsfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1504598318550-17eba1008a68?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'https://images.unsplash.com/photo-1524842495237-6abc737eae1f?q=80&w=1946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'https://images.unsplash.com/photo-1707344088547-3cf7cea5ca49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'https://plus.unsplash.com/premium_photo-1664362416374-4f734db57037?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']
+                            .gem-item 
+                                img.gem-image(src= val, alt='')
+            section.diamon
+                .container 
+                    h2.heading Hidden gems in Bangkok
+                    .diamon-list
+                        each val in ['https://images.unsplash.com/photo-1504598318550-17eba1008a68?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'https://images.unsplash.com/photo-1524842495237-6abc737eae1f?q=80&w=1946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'https://images.unsplash.com/photo-1707344088547-3cf7cea5ca49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'https://plus.unsplash.com/premium_photo-1664362416374-4f734db57037?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']
+                            .diamon-item 
+                                .diamon-image
+                                    img(src= val, alt='')
+                                    .diamon-overlap
+                                        h3.diamon-title Bangkok Trip
+                                        span.diamon-time 27 Sep, 2020
+                a.button(href="#") Explore all
+        footer.footer
+            .container.footer-container 
+                .footer-top 
+                    .footer-columns
+                        .footer-column
+                            a.footer-logo(href='/')
+                                img(srcSet='./images/logo.png 2x' alt='Airtrav')
+                            p.footer-description Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+                            form.subscribe(action="#")
+                                input.subscribe-email(type='email', placeholder='Enter your email')
+                                button.subscribe-button(type='submit' value='submit') 
+                                    img(srcSet='./images/icon-arrow-right.png 2x' alt='icon-arrow-right')
+                        .footer-column 
+                            h4.footer-heading Services
+                            ul.footer-links
+                                each val in ['Trip Planner', 'Tour Planning', 'Tour Guide', 'Tour Package', 'Tour advice']
+                                    li.footer-item 
+                                        a.footer-link(href='#')= val
+                        .footer-column 
+                            h4.footer-heading Support
+                            ul.footer-links
+                                each val in ['Account', 'Legal', 'Contact', 'Terms & Condition', 'Privacy Policy']
+                                    li.footer-item 
+                                        a.footer-link(href='#')= val
+                        .footer-column 
+                            h4.footer-heading Business
+                            ul.footer-links
+                                each val in ['Success', 'About Locato', 'Blog', 'Information', 'Travel Guide']
+                                    li.footer-item 
+                                        a.footer-link(href='#')= val
+                .footer-bottom 
+                    p.copy-right Copyright© 2021 UIHUT LLC. All rights reserved
+                    div.footer-social
+                        each val in ['./images/icon-facebook.png 2x', './images/icon-linkd.png 2x', './images/icon-twitter.png 2x', './images/icon-instragram.png 2x']
+                            a(href='#')
+                                img(srcSet=val alt='')

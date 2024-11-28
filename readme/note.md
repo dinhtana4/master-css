@@ -5,7 +5,7 @@ display: flex -> set cho thẻ cha. Khi set display: flex, có những thuộc t
 + justify-content: flex-start: hiển thị ở bên trái, flex-end: hiển thị ở phía bên phải, center: hiển thị trung tâm, space-between: hiển thị 2 bên trái phải - trống ở trung tâm, space-around: khoảng trống sẽ chia đều ở mỗi phần tử, space-evenly: khoảng trống giữa mỗi phần tử bằng nhau
 
 display: grid
-+ grid-column-template: 270px 270px 270px 270px || 50% 50% 50% 50% || 1fr 1fr 1fr 1fr || repeat(4, 1fr) -> chia số lượng columns
++ grid-column-template: 270px 270px 270px 270px || 50% 50% 50% 50% || 1fr 1fr 1fr 1fr || repeat(4, 1fr) || 200px repeat(2, 1fr) 300px -> chia số lượng columns
 + align-items: stretch, start, end, center (like flex)
 + justify-content: start, end, center, space-between, space-around (like flex)
 
