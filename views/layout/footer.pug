@@ -1,0 +1,36 @@
+footer.footer
+    .container.footer-container 
+        .footer-top 
+            .footer-columns
+                .footer-column
+                    a.footer-logo(href='/')
+                        img(srcSet='./images/logo.png 2x' alt='Airtrav')
+                    p.footer-description Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+                    form.subscribe(action="#")
+                        input.subscribe-email(type='email', placeholder='Enter your email')
+                        button.subscribe-button(type='submit' value='submit') 
+                            img(srcSet='./images/icon-arrow-right.png 2x' alt='icon-arrow-right')
+                .footer-column 
+                    h4.footer-heading Services
+                    ul.footer-links
+                        each val in ['Trip Planner', 'Tour Planning', 'Tour Guide', 'Tour Package', 'Tour advice']
+                            li.footer-item 
+                                a.footer-link(href='#')= val
+                .footer-column 
+                    h4.footer-heading Support
+                    ul.footer-links
+                        each val in ['Account', 'Legal', 'Contact', 'Terms & Condition', 'Privacy Policy']
+                            li.footer-item 
+                                a.footer-link(href='#')= val
+                .footer-column 
+                    h4.footer-heading Business
+                    ul.footer-links
+                        each val in ['Success', 'About Locato', 'Blog', 'Information', 'Travel Guide']
+                            li.footer-item 
+                                a.footer-link(href='#')= val
+        .footer-bottom 
+            p.copy-right Copyright© 2021 UIHUT LLC. All rights reserved
+            div.footer-social
+                each val in ['./images/icon-facebook.png 2x', './images/icon-linkd.png 2x', './images/icon-twitter.png 2x', './images/icon-instragram.png 2x']
+                    a(href='#')
+                        img(srcSet=val alt='')
