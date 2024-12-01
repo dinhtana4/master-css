@@ -1,0 +1,26 @@
+body {
+    font-family: var(--primary-font);
+    background-color: white;
+    font-size: var(--fz-default);
+    line-height: 1;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+::-webkit-input-placeholder {
+    color: var(--gray4);
+}
+
+::-moz-input-placeholder {
+    color: var(--gray4);
+}
+
+.section {
+    margin-bottom: 70px;
+}

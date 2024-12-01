@@ -1,18 +1,16 @@
 mixin tourItem(imageUrl, price, title, review, reviewCounts, durations)
-    .tour
+    .tour-item
         .tour-top
             img.tour-image(src= imageUrl, alt='')
             span.tour-price(href='#') From $#{price} 
-        .tour-body
-            .tour-content
-                h3.tour-title= title
-                .tour-rating
-                    .tour-review
-                        img(src='./images/star.png', alt='')
-                        .tour-review-count #{review} (#{reviewCounts} reviews)
-                    .tour-duration Duration: #{durations} hours
-            div
-                a.tour-button(href='#') Tours Price $60
+        .tour-content
+            h3.tour-title= title
+            .tour-rating
+                .tour-review
+                    img(src='./images/star.png', alt='')
+                    .tour-review-count #{review} (#{reviewCounts} reviews)
+                .tour-duration Duration: #{durations} hours
+            a.tour-button(href='#') Tours Price $60
 
 mixin popularItem(imageUrl, time, title, review) 
     .popular-item 

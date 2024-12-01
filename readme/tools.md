@@ -9,6 +9,7 @@
 - Format on save: Tích chọn vào
 - Default formatter: Prettier
 - Indent-Rainbow: easy to read
+- SCSS IntelliSense
 
 # VScode commands
 

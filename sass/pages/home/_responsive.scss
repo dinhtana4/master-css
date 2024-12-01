@@ -1,0 +1,62 @@
+@media screen and (max-width: 767.98px) {
+    .tour-item {
+        width: 100%;
+    }
+
+    .tour-list {
+        gap: 20px
+    }
+
+    .popular-list {
+        --columns: 1;
+    }
+
+    .heading {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .diamon-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-rows: 148px;
+        gap: 16px;
+    }
+
+    .diamon-item {
+        padding: 8px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .gem-list {
+        grid-template-rows: 100px 100px 70px;
+        gap: 10px;
+    }
+
+    .section {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-description {
+        max-width: 268px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023.98px) {
+    .tour-item {
+        width: calc(50% - 20px)
+    }
+
+    .popular-list {
+        --columns: 2;
+    }
+}

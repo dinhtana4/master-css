@@ -1,0 +1,24 @@
+.header {
+    padding: 16px 0;
+    background-color: $white-color;
+    box-shadow: 0px 6px 30px 0px rgba(15, 15, 15, 0.06);
+    margin-bottom: 70px;
+    &-list {
+        @include flex(center, center, 20px);
+    }
+
+    &-item {
+        padding: 14px 22px;
+        border-radius: 10px;
+        background-color: $gray7;
+        color: $gray3;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.42;
+        transition: all 0.15s linear;
+        &:hover {
+            background-color: $primary-color;
+            color: $white-color;
+        }
+    }
+}
