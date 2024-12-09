@@ -204,18 +204,16 @@ body {
   margin-bottom: 70px;
 }
 .tour-item {
-  width: calc(33.33% - 20px);
   background-color: #fff;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  border: 1px solid #3B71FE;
   box-shadow: 0px 12px 64px 0px rgba(0, 0, 0, 0.06);
+  flex: 1;
 }
 .tour-list {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
 }
 .tour-image {
   width: 100%;
@@ -460,11 +458,17 @@ body {
 }
 
 @media screen and (max-width: 767.98px) {
-  .tour-item {
-    width: 100%;
-  }
   .tour-list {
-    gap: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    padding: 30px;
+  }
+  .tour-item {
+    scroll-snap-align: center;
   }
   .popular-list {
     --columns: 1;
@@ -502,12 +506,396 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
-  .tour-item {
-    width: calc(50% - 20px);
-  }
   .popular-list {
     --columns: 2;
   }
+}
+.my-job {
+  position: relative;
+  text-align: center;
+}
+.my-job .pseudo {
+  background-color: white;
+  z-index: 2;
+  padding: 5px;
+  position: relative;
+}
+.my-job .pseudo::before {
+  content: "I am a ";
+}
+.my-job .pseudo::after {
+  content: " developer.";
+}
+.my-job::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: gray;
+  width: 100%;
+  left: 0;
+  top: 50%;
+}
+
+.button-rounded {
+  width: 50px;
+  height: 50px;
+  color: #6a5af9;
+  border-radius: 100rem;
+  position: relative;
+}
+.button-rounded::before {
+  content: "";
+  background-color: currentColor;
+  opacity: 0.1;
+  position: absolute;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e6e8ec;
+  color: transparent;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox-label {
+  cursor: pointer;
+  display: inline-block;
+}
+.checkbox-input {
+  display: none;
+}
+.checkbox-input:checked ~ .checkbox {
+  /* active */
+  background-color: #3B71FE;
+  border-color: #3B71FE;
+  color: white;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e6e8ec;
+  color: transparent;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio-label {
+  cursor: pointer;
+  display: inline-block;
+}
+.radio-input {
+  display: none;
+}
+.radio-input:checked ~ .radio {
+  /* active */
+  background-color: #3B71FE;
+  border-color: #3B71FE;
+  color: white;
+}
+
+.toggle {
+  width: 48px;
+  height: 24px;
+  padding: 4px 5px;
+  border-radius: 60px;
+  background-color: #E7ECF3;
+}
+.toggle-label {
+  cursor: pointer;
+  display: inline-block;
+}
+.toggle-input {
+  display: none;
+}
+.toggle-input:checked ~ .toggle {
+  /*active*/
+  background-color: #3B71FE;
+}
+.toggle-input:checked ~ .toggle .toggle-spinner {
+  /* active */
+  transform: translateX(22px);
+}
+.toggle-spinner {
+  width: 16px;
+  height: 16px;
+  background-color: #FCFCFD;
+  border-radius: 100rem;
+  transition: all 0.25s linear;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown-select {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: #353945;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown::before {
+  content: "";
+  height: 20px;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}
+.dropdown:hover .dropdown-list {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-list {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 120px 0px rgba(30, 30, 30, 0.1);
+  transition: all 0.25s linear;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  margin-top: 20px;
+}
+.dropdown-item {
+  color: #353945;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 8px 10px;
+  width: 132px;
+  cursor: pointer;
+}
+.dropdown-item:hover {
+  background-color: #F4F5F9;
+  border-radius: 8px;
+}
+
+.search {
+  max-width: 500px;
+  margin: 25px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-icon {
+  position: absolute;
+  left: 15px;
+}
+.search-input {
+  padding: 15px 15px 15px 55px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: all 0.25s linear;
+  width: 100%;
+}
+.search-input:focus {
+  border-color: #8678ff;
+  background-color: transparent;
+}
+
+.input-styles {
+  max-width: 500px;
+  margin: 25px auto;
+  position: relative;
+}
+.input-styles span {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777e90;
+  font-size: 14px;
+  transition: all 0.2s linear;
+  pointer-events: none;
+}
+.input-styles input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.input-styles input:focus {
+  border-color: #ff754c;
+}
+.input-styles input:focus ~ span, .input-styles input :not(:placeholder-shown) ~ span {
+  top: 0;
+  left: 10px;
+  background-color: white;
+  padding: 0 5px;
+}
+
+.transform .card {
+  width: 400px;
+  height: 250px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.transform .card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.transform .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: all 0.25s linear;
+}
+.transform .card:hover .card-img {
+  transform: scale(1.5);
+}
+
+.shape-outside {
+  max-width: 500px;
+  margin: 20px auto;
+}
+.shape-outside img {
+  --shape: 25% 40% at 50% 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  float: left;
+  clip-path: ellipse(var(--shape));
+  shape-outside: ellipse(var(--shape));
+  shape-margin: 10px;
+}
+
+.table {
+  margin-top: 30px;
+  width: 100%;
+  overflow-x: auto;
+}
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+.table table thead tr,
+.table table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #e6e8ec;
+}
+.table table th,
+.table table td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 25px 25px;
+}
+.table table th {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #a6a7b2;
+}
+.table table .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.table table .follow {
+  height: 26px;
+  color: white;
+  background-color: #ff754c;
+  font-size: 14px;
+  border-radius: 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+.table table .status {
+  height: 26px;
+  color: #ffa2c0;
+  background-color: #fff6f9;
+  font-size: 14px;
+  border-radius: 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+.table table .user-avatar {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 100rem;
+  flex-shrink: 0;
+}
+
+.sticky-table {
+  overflow-x: auto;
+  border: 1px solid #f0f4f8;
+}
+.sticky-table table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+.sticky-table table th,
+.sticky-table table td {
+  padding: 15px 30px;
+  text-align: left;
+  vertical-align: middle;
+}
+.sticky-table table thead th:first-child,
+.sticky-table table tbody td:first-child {
+  position: sticky;
+  left: 0;
+}
+.sticky-table table td {
+  background-color: white;
+}
+.sticky-table table tbody tr {
+  border-top: 1px solid #f0f4f8;
+}
+.sticky-table table th {
+  color: #364d67;
+  font-weight: 600;
+  background-color: #f1f7fd;
+}
+.sticky-table table .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.sticky-table table .user span {
+  padding-right: 5px;
+}
+.sticky-table table .user img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 100rem;
 }
 
 /*# sourceMappingURL=main.css.map */

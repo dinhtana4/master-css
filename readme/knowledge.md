@@ -109,6 +109,8 @@
 - `max` tương tự ở dòng trên nhưng là số lớn nhất
 - `min-length` tối thiểu kí tự
 - `max-length` tối đa kí tự
+- border: none: remove border
+- outline: none: remove highlight khi focus
 - button
 - `type`: button, submit, reset
 - `inputmode`: _search_ _tel_ _number_ _decimal_ _email_ _url_
@@ -195,6 +197,10 @@
 - `skew`
 - clip-path: polygon
 - shape-outside
-- table
+- table: mặc định th là text-align center, td là text-align left.
++ border-collapse: collapse: remove space ở giữa các cột, dòng (thêm border vào cột sẽ thấy)
++ sử dụng padding-inline cho td (hoặc dùng cho thẻ con trong td trong trường hợp sticky table) để content không bị tràn qua td khác
++ vertical-align: middle cho td & th để canh giữa trong table
++ position: sticky để fix column/row cho table khi scroll
 - form: icon, focus, placeholder-shown
 - animation

@@ -1,10 +1,18 @@
 @media screen and (max-width: 767.98px) {
-    .tour-item {
-        width: 100%;
-    }
+    .tour {
+        &-list {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 250px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            padding: 30px;
+        }
 
-    .tour-list {
-        gap: 20px
+        &-item {
+            scroll-snap-align: center;
+        }
     }
 
     .popular-list {
@@ -52,9 +60,10 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023.98px) {
-    .tour-item {
-        width: calc(50% - 20px)
-    }
+
+    // .tour-item {
+    //     width: calc(50% - 20px)
+    // }
 
     .popular-list {
         --columns: 2;

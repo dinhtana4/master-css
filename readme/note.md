@@ -27,3 +27,5 @@ Margin:
 + margin-left: auto -> đẩy item về right
 + margin-right: auto -> đẩy item về left
 + margin: 0 auto: đẩy item về center
+
+pointer-events: none: loại bỏ event con trỏ trên thẻ
