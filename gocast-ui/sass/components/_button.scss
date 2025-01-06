@@ -1,0 +1,15 @@
+@use "../utils" as *;
+.button {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px 14px;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    &-primary {
+        color: $gray-neutral1;
+        background-color: $primary-color;
+    }
+}

@@ -1,0 +1,39 @@
+@use "../utils" as *;
+
+.top-bar {
+    padding: 24px 56px;
+    @include flexbox(center, space-between);
+    &-right {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+}
+.profile {
+    display: block;
+    @include size(48px);
+    img {
+        border-radius: 100rem;
+        @include cover();
+    }
+}
+.search {
+    padding: 12px 20px;
+    @include rounded("rounded-xl");
+    @include flexbox(center, null, 12px);
+    flex: 0 1 360px;
+    background-color: $search-bg;
+    &-input {
+        @include bg(transparent);
+        border: none;
+        flex: 1;
+        font-weight: 500;
+        font-size: 15px;
+        color: $primary-color;
+        caret-color: $primary-color;
+        @include placeholder($gray2);
+    }
+}
+.button-upload {
+    height: 48px;
+}

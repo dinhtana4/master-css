@@ -1,0 +1,58 @@
+@use "../utils" as *;
+.sidebar {
+    padding: 48px 30px;
+    border-right: 1px solid #e9eef4;
+}
+.logo {
+    display: block;
+    margin-bottom: 44px;
+    color: #11142d;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    &:not(:last-child):after {
+        content: "";
+        display: block;
+        height: 1px;
+        margin-block: 26px;
+        background-color: $graye9;
+    }
+    &-heading {
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        color: $text-gray;
+    }
+    &-link {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 143%;
+        padding: 8px 30px 8px 20px;
+        border-radius: 12px;
+        color: #8494ab;
+        align-items: center;
+        &:hover {
+            background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
+            color: white;
+            [fill^="#E5"] {
+                fill: white;
+                opacity: 1;
+            }
+            [fill^="#A5"] {
+                mix-blend-mode: normal;
+                fill: hsl(
+                    var(--primary-h),
+                    calc(var(--primary-s) + 1%),
+                    calc(var(--primary-l) + 16%)
+                );
+            }
+        }
+    }
+    &-icon {
+        flex: 0 0 24px;
+    }
+}
